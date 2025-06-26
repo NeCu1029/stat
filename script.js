@@ -141,3 +141,15 @@ document.getElementById("a6-4").addEventListener("click", () => {
   q6.classList.add("hidden");
   fin.classList.remove("hidden");
 });
+document.getElementById("a6-5").addEventListener("click", () => {
+  ans = ans * 10 + 5;
+  text.innerText = (ans * 12345678).toString(36);
+  q6.classList.add("hidden");
+  fin.classList.remove("hidden");
+});
+document.getElementById("a6-6").addEventListener("click", () => {
+  ans = ans * 10 + 6;
+  text.innerText = (ans * 12345678).toString(36);
+  q6.classList.add("hidden");
+  fin.classList.remove("hidden");
+});
