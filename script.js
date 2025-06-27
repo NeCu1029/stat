@@ -8,6 +8,7 @@ const fin = document.getElementById("finish");
 const doc = document.getElementById("doc");
 const text = document.getElementById("text");
 let ans = 0;
+let timeout;
 
 document.getElementById("a1").addEventListener("click", () => {
   q1.classList.add("hidden");
@@ -19,7 +20,7 @@ document.getElementById("a2-1").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
@@ -29,7 +30,7 @@ document.getElementById("a2-2").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
@@ -39,7 +40,7 @@ document.getElementById("a2-3").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
@@ -49,7 +50,7 @@ document.getElementById("a2-4").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
@@ -59,7 +60,7 @@ document.getElementById("a2-5").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
@@ -69,10 +70,16 @@ document.getElementById("a2-6").addEventListener("click", () => {
   doc.setAttribute("src", `img${ans}.jpg`);
   q2.classList.add("hidden");
   q3.classList.remove("hidden");
-  setTimeout(() => {
+  timeout = setTimeout(() => {
     q3.classList.add("hidden");
     q4.classList.remove("hidden");
   }, 180000);
+});
+
+document.getElementById("skip").addEventListener("click", () => {
+  clearTimeout(timeout);
+  q3.classList.add("hidden");
+  q4.classList.remove("hidden");
 });
 
 document.getElementById("a4-1").addEventListener("click", () => {

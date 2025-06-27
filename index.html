@@ -19,6 +19,15 @@
         margin-bottom: 2rem;
         width: 100%;
       }
+
+      button {
+        margin: 1rem;
+      }
+
+      #text {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
     </style>
   </head>
   <body>
@@ -57,9 +66,7 @@
       <h2>분기 선택</h2>
       <p>
         새로고침하거나 중간에 화면을 이탈하면 설문 진행이 원활하게 되지 않으니
-        참고 바랍니다. 본 페이지는 Github Pages를 통해 배포되며, Github 안에
-        모든 소스 코드가 저장되어 있으므로 설문이 모두 끝나기 전에는 확인하지
-        말아 주시기 바랍니다.
+        참고 바랍니다.
       </p>
       <p>
         Q2. 다음 페이지에서는 문서 1개를 보고 질문 2개에 답하게 됩니다. 아래
@@ -82,17 +89,19 @@
         화면을 유지해 주시기 바랍니다.
       </p>
       <img id="doc" />
+      <button id="skip">건너뛰기</button>
     </div>
     <div id="q4" class="hidden">
       <h2>문서 질문 1</h2>
       <p>Q4. 다음 중 약관 내용으로 옳지 않은 것은?</p>
-      <button id="a4-1">회사는 약관의 내용을 반드시 공개해야 한다.</button>
+      <button id="a4-1">회사는 약관의 내용을 반드시 공개해야 한다.</button
+      ><br />
       <button id="a4-2">
-        회사는 약관 내용을 개정하기 전 반드시 사전 공지해야 한다.
-      </button>
+        회사는 약관 내용을 개정하기 전 반드시 사전 공지해야 한다.</button
+      ><br />
       <button id="a4-3">
-        회사는 천재지변으로 인한 서비스 중단 시 반드시 보상해야 한다.
-      </button>
+        회사는 천재지변으로 인한 서비스 중단 시 반드시 보상해야 한다.</button
+      ><br />
       <button id="a4-4">
         회원 가입을 신청한 사람이더라도 회원 가입이 불가능할 수 있다.
       </button>
@@ -101,14 +110,13 @@
       <h2>문서 질문 2</h2>
       <p>Q5. 다음 중 약관 내용으로 옳은 것은?</p>
       <button id="a5-1">
-        회사는 약관 내용의 변경 사실을 적용 일자 3일 전부터 알릴 수 있다.
-      </button>
-      <button id="a5-2">
-        회사가 제공하는 모든 서비스는 연중무휴 운영된다.
-      </button>
+        회사는 약관 내용의 변경 사실을 적용 일자 3일 전부터 알릴 수 있다.</button
+      ><br />
+      <button id="a5-2">회사가 제공하는 모든 서비스는 연중무휴 운영된다.</button
+      ><br />
       <button id="a5-3">
-        회사는 웹사이트 초기 화면에 사업자등록번호를 게시한다.
-      </button>
+        회사는 웹사이트 초기 화면에 사업자등록번호를 게시한다.</button
+      ><br />
       <button id="a5-4">
         회사의 약관 변경에 아무런 의사를 표현하지 않으면 거부로 간주한다.
       </button>
@@ -116,26 +124,35 @@
     <div id="q6" class="hidden">
       <h2>우수 문서 선택</h2>
       <p>
-        다음은 앞서 본 문서와 같은 내용, 다른 디자인의 문서입니다. 가장 가독성,
-        시인성이 좋은 문서의 번호를 골라 주세요.
+        다음은 앞서 본 문서와 같은 내용, 다른 디자인의 문서입니다. 스크롤을 내려
+        문서를 읽은 뒤 가장 가독성, 시인성이 좋은 문서의 번호를 골라 주세요.
       </p>
-      <button id="a6-1">1</button>
-      <button id="a6-2">2</button>
-      <button id="a6-3">3</button>
-      <button id="a6-4">4</button>
-      <button id="a6-5">5</button>
-      <button id="a6-6">6</button>
       <img src="img1.jpg" /><img src="img2.jpg" /><img src="img3.jpg" />
       <img src="img4.jpg" /><img src="img5.jpg" /><img src="img6.jpg" />
+      <button id="a6-1">1</button><br />
+      <button id="a6-2">2</button><br />
+      <button id="a6-3">3</button><br />
+      <button id="a6-4">4</button><br />
+      <button id="a6-5">5</button><br />
+      <button id="a6-6">6</button>
     </div>
     <div id="finish" class="hidden">
       <p>
         본 페이지에서 진행하는 설문이 모두 마무리되었습니다. 나머지 설문은 구글
         설문지에서 진행됩니다. 화면에 굵게 보이는 텍스트를 복사한 뒤 구글
-        설문지로 이동해 주세요.
+        설문지에 참여해 주세요. 만약 현재 페이지에서 구글 설문이 보이지 않는다면
+        텍스트를 복사했는지 확인한 뒤 아래 링크를 눌러 주세요.
       </p>
       <div id="text">-</div>
-      <a href="https://forms.gle/pbE5aEYexc1YLXMBA">설문 링크</a>
+      <a href="https://forms.gle/pbE5aEYexc1YLXMBA">설문 링크</a><br />
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfaibcckGL2cXiErcz-Uayo7t38RN9ooOkqWY2zq4iJYpreOg/viewform?embedded=true"
+        width="640"
+        height="984"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      ></iframe>
     </div>
 
     <script src="script.js"></script>
